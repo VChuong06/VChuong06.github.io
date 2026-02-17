@@ -1,22 +1,55 @@
-window.addEventListener("DOMContentLoaded", () => {
+function changeProjects(mode){
 
-  const bg = document.querySelector(".background");
+  const right = document.getElementById("rightColumn");
 
-  if (!bg) {
-    console.log("Không tìm thấy background!");
-    return;
-  }
+  // animation OUT
+  right.style.transform = "translateX(120px)";
+  right.style.opacity = "0";
 
-  document.addEventListener("mousemove", (e) => {
-    const x = e.clientX;
-    const y = e.clientY;
+  setTimeout(() => {
 
-    bg.style.background = `
-      radial-gradient(circle at ${x}px ${y}px,
-      rgba(0,255,255,0.25), transparent 25%),
-      radial-gradient(circle at 20% 30%, rgba(0,150,255,0.25), transparent 40%),
-      radial-gradient(circle at 80% 70%, rgba(255,0,180,0.2), transparent 40%)
-    `;
-  });
+    let content = "";
 
-});
+    switch(mode){
+
+      case 1:
+        content = `
+          <div class="box">Project 01</div>
+          <div class="box">Project 02</div>
+          <div class="box">Future Project</div>
+        `;
+        break;
+
+      case 2:
+        content = `
+          <div class="box">ESP32 Development</div>
+          <div class="box">Embedded Linux</div>
+          <div class="box">Python & AI</div>
+        `;
+        break;
+
+      case 3:
+        content = `
+          <div class="box">Email: example@gmail.com</div>
+          <div class="box">GitHub: VChuong06</div>
+          <div class="box">Portfolio Website</div>
+        `;
+        break;
+
+      case 4:
+        content = `
+          <div class="box">AI Drone</div>
+          <div class="box">Smart Robot</div>
+          <div class="box">Computer Vision</div>
+        `;
+        break;
+    }
+
+    right.innerHTML = content;
+
+    // animation IN
+    right.style.transform = "translateX(0)";
+    right.style.opacity = "1";
+
+  },300);
+}
