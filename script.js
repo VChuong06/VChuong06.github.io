@@ -1,5 +1,8 @@
 function changeProjects(mode){
 
+  // thoát khỏi home mode nếu đang ở đó
+  document.body.classList.remove("home-mode");
+
   const right = document.getElementById("rightColumn");
 
   // animation OUT
@@ -14,9 +17,9 @@ function changeProjects(mode){
 
       case 1:
         content = `
-          <div class="box">Project 01</div>
-          <div class="box">Project 02</div>
-          <div class="box">Future Project</div>
+          <div class="box">Robot Car</div>
+          <div class="box">ESP32 Matrix</div>
+          <div class="box">Drone Project</div>
         `;
         break;
 
@@ -30,7 +33,7 @@ function changeProjects(mode){
 
       case 3:
         content = `
-          <div class="box">Email: example@gmail.com</div>
+          <div class="box">Email: phamnguyenvanchuong@gmail.com</div>
           <div class="box">GitHub: VChuong06</div>
           <div class="box">Portfolio Website</div>
         `;
@@ -40,7 +43,7 @@ function changeProjects(mode){
         content = `
           <div class="box">AI Drone</div>
           <div class="box">Smart Robot</div>
-          <div class="box">Computer Vision</div>
+          <div class="box">Vision System</div>
         `;
         break;
     }
@@ -52,4 +55,14 @@ function changeProjects(mode){
     right.style.opacity = "1";
 
   },300);
+}
+
+/* ===== HOME MODE ===== */
+function goHome(){
+
+  document.body.classList.add("home-mode");
+
+  const right = document.getElementById("rightColumn");
+
+  right.style.opacity = "0";
 }

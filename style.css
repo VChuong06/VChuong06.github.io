@@ -1,3 +1,4 @@
+/* ===== RESET ===== */
 *{
   margin:0;
   padding:0;
@@ -7,7 +8,6 @@
 
 body{
   background:#05070d;
-  color:white;
   min-height:100vh;
   overflow:hidden;
 }
@@ -21,7 +21,7 @@ body{
     radial-gradient(circle at 20% 30%, rgba(0,150,255,0.3), transparent 40%),
     radial-gradient(circle at 80% 70%, rgba(255,0,180,0.25), transparent 40%),
     radial-gradient(circle at 50% 50%, rgba(0,255,150,0.2), transparent 50%);
-  animation: moveBg 12s infinite alternate ease-in-out;
+  animation:moveBg 12s infinite alternate ease-in-out;
   z-index:-1;
 }
 
@@ -41,14 +41,14 @@ body{
   gap:40px;
 }
 
-/* ===== PROFILE (LEFT) ===== */
+/* ===== PROFILE LEFT ===== */
 .profile{
   flex:1;
   padding:40px;
   background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.1);
-  border-radius:16px;
-  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:18px;
+  backdrop-filter:blur(12px);
   animation:fadeIn 1s ease;
 }
 
@@ -57,44 +57,39 @@ body{
   to{opacity:1; transform:translateY(0);}
 }
 
-/* rainbow text */
-.rainbow{
-  font-size:52px;
-  font-weight:bold;
+/* ===== GRADIENT TEXT ===== */
+h1,p,button,.box,footer{
   background:linear-gradient(90deg,#00e5ff,#00ff99,#ff00ff,#ff9900);
   -webkit-background-clip:text;
   background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
-.role{
-  margin-top:10px;
-  font-size:22px;
-  color:#b0b0ff;
+.rainbow{
+  font-size:52px;
+  font-weight:bold;
 }
 
 .about{
-  margin-top:20px;
-  line-height:1.6;
-  color:#ddd;
+  margin-top:14px;
+  font-size:20px;
 }
 
-/* ===== BUTTONS ===== */
+/* ===== BUTTON GROUP ===== */
 .btn-group{
   display:flex;
+  flex-wrap:wrap;
   gap:12px;
   margin-top:25px;
-  flex-wrap:wrap;
 }
 
 .btn-group button{
   padding:10px 18px;
   border:none;
   border-radius:10px;
-  background:#00e5ff;
-  color:black;
-  font-weight:bold;
+  background:rgba(0,255,255,0.15);
   cursor:pointer;
+  font-weight:bold;
   transition:0.3s;
 }
 
@@ -129,7 +124,25 @@ body{
 
 .box:hover{
   transform:translateX(8px);
-  box-shadow:0 0 30px rgba(0,255,255,0.4);
+  box-shadow:0 0 30px rgba(0,255,255,0.45);
+}
+
+/* ===== HOME MODE ===== */
+.home-mode .container{
+  justify-content:center;
+}
+
+.home-mode .profile{
+  max-width:700px;
+  text-align:center;
+}
+
+.home-mode .right-column{
+  display:none;
+}
+
+.home-mode .btn-group{
+  justify-content:center;
 }
 
 /* ===== FOOTER ===== */
@@ -138,7 +151,6 @@ footer{
   bottom:15px;
   width:100%;
   text-align:center;
-  color:rgba(255,255,255,0.7);
   font-size:14px;
   letter-spacing:1px;
 }
