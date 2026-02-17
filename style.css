@@ -63,6 +63,7 @@ body{
   font-weight:bold;
   background:linear-gradient(90deg,#00e5ff,#00ff99,#ff00ff,#ff9900);
   -webkit-background-clip:text;
+  background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
