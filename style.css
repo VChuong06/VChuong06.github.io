@@ -59,7 +59,14 @@ body{
 
 /* ===== GRADIENT TEXT (KHÔNG áp cho box) ===== */
 h1,p,footer{
-  background: linear-gradient(90deg,#00e5ff,#00ff99,#ff00ff,#ff9900);
+  background: linear-gradient(
+    90deg,
+    #00f5d4,
+    #ff3cac,
+    
+    #2b86c5,
+    #00f5d4
+  );
   -webkit-background-clip:text;
   background-clip:text;
   -webkit-text-fill-color:transparent;
@@ -84,6 +91,7 @@ h1,p,footer{
 }
 
 .btn-group button{
+  color: white;
   padding:10px 18px;
   border:none;
   border-radius:10px;
@@ -94,7 +102,6 @@ h1,p,footer{
 }
 
 .btn-group button:hover{
-  color: white;
   transform:scale(1.08);
   box-shadow:0 0 20px rgba(0,255,255,0.5);
 }
