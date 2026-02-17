@@ -15,24 +15,29 @@
 
   <!-- LEFT INFO -->
   <div class="profile">
-    <h1> Van Chuong</h1>
-    <p class="role">AIOT • Robotics • Embedded Linux</p>
+  <h1 class="rainbow">Van Chuong</h1>
+  <p class="role">AIOT • Robotics • Embedded Linux</p>
+  <p class="about">Sinh viên Điện tử Viễn thông.</p>
 
-    <p class="about">
-      Sinh viên Điện tử Viễn thông.<br>
-    </p>
-
-    <button class="btn">My Projects</button>
+  <div class="btn-group">
+    <button onclick="changeProjects(1)">Projects</button>
+    <button onclick="changeProjects(2)">Skills</button>
+    <button onclick="changeProjects(3)">Contact</button>
+    <button onclick="changeProjects(4)">Future</button>
   </div>
+</div>
 
   <!-- RIGHT BOX -->
-  <div class="right-column">
-    <div class="box">Project 01</div>
-    <div class="box">Project 02</div>
-    <div class="box">Future Project</div>
-  </div>
+ <div class="right-column" id="rightColumn">
+  <div class="box">Project 01</div>
+  <div class="box">Project 02</div>
+  <div class="box">Future Project</div>
+</div>
 
 </div>
+
+<script src="script.js"></script>
+<footer>Designed by Van Chuong 🚀</footer>
 
 </body>
 </html>
