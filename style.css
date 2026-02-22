@@ -57,13 +57,11 @@ body{
   to{opacity:1; transform:translateY(0);}
 }
 
-/* ===== GRADIENT TEXT (KHÔNG áp cho box) ===== */
 h1,p,footer{
   background: linear-gradient(
     90deg,
     #00f5d4,
     #ff3cac,
-    
     #2b86c5,
     #00f5d4
   );

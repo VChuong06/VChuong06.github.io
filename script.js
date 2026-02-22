@@ -1,11 +1,9 @@
 function changeProjects(mode){
 
-  // thoát khỏi home mode nếu đang ở đó
   document.body.classList.remove("home-mode");
 
   const right = document.getElementById("rightColumn");
 
-  // animation OUT
   right.style.transform = "translateX(120px)";
   right.style.opacity = "0";
 
